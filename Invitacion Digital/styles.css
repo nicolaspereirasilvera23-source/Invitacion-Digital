@@ -57,6 +57,50 @@ p {
   box-shadow: var(--shadow);
 }
 
+/* Decoración PNG en tarjetas de datos (enrredadera y otras en esquinas) */
+.card-with-deco {
+  position: relative;
+  overflow: visible;
+}
+
+.card-with-deco > .deco {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  object-fit: contain;
+  opacity: 0.94;
+}
+
+.deco-tl {
+  top: 8px;
+  left: 8px;
+}
+
+.deco-tr {
+  top: 8px;
+  right: 8px;
+}
+
+.deco-br {
+  bottom: 8px;
+  right: 8px;
+}
+
+.deco-bl {
+  bottom: 8px;
+  left: 8px;
+}
+
+/* Contenido por encima de las decoraciones */
+.card-with-deco > :not(.deco) {
+  position: relative;
+  z-index: 2;
+}
+
+.summary-card.card-with-deco {
+  padding: 20px 18px 18px 68px;
+}
+
 .btn-primary {
   display: inline-flex;
   align-items: center;
@@ -637,6 +681,15 @@ p {
   .section {
     margin: 36px auto;
     padding: 0 20px;
+  }
+
+  .card-with-deco > .deco {
+    max-width: 48px;
+    height: auto;
+  }
+
+  .summary-card.card-with-deco {
+    padding-left: 56px;
   }
 
   .hero-card {
