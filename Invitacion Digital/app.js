@@ -7,11 +7,20 @@ const openLetter = () => {
   if (!envelope || !content) {
     return;
   }
+
   envelope.classList.add('open');
   content.classList.add('revealed');
+
+  // 🔊 reproducir música
+  const music = document.getElementById("music");
+  if (music) {
+    music.play().catch(() => {});
+  }
+
   if (sealButton) {
     sealButton.setAttribute('aria-pressed', 'true');
   }
+
   if (hint) {
     hint.style.opacity = '0';
     setTimeout(() => hint.remove(), 300);

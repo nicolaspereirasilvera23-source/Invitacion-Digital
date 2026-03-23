@@ -175,31 +175,6 @@ p {
   color: var(--ink);
 }
 
-.qr-mini {
-  display: grid;
-  gap: 8px;
-  justify-items: center;
-  background: #f6fbff;
-  border-radius: 18px;
-  padding: 16px;
-  border: 1px solid #e2f2ff;
-}
-
-.qr-mini img {
-  width: 120px;
-  border-radius: 14px;
-  padding: 8px;
-  background: #ffffff;
-}
-
-.qr-label {
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: var(--sky-500);
-  font-weight: 600;
-}
-
 .eyebrow {
   text-transform: uppercase;
   letter-spacing: 4px;

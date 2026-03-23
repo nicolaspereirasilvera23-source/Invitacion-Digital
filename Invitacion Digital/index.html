@@ -1,226 +1,233 @@
 <!doctype html>
+
 <html lang="es">
   <head>
     <meta charset="utf-8" />
-    <title>Invitacion Digital</title>
+    <title>Invitación Digital</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&family=Great+Vibes&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
+
+```
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&family=Great+Vibes&display=swap"
+  rel="stylesheet"
+/>
+
+<link rel="stylesheet" href="styles.css" />
+```
+
   </head>
-  <body data-qr-base="http://localhost:8000/generate-qr?url=">
+
+  <body>
     <div class="page">
-      <section class="intro">
-        <div class="envelope" id="envelope">
-          <div class="envelope-back"></div>
-          <div class="flap"></div>
-          <div class="letter">
-            <div class="letter-inner">
-              <p class="letter-title">Querida familia y amigos,</p>
-              <p class="letter-text">
-                Comienza otra etapa, otros caminos, otros sueños. Atras quedan inborrables recuerdos y se forjaran otros. Este dia la fantasia se hace realidad 
-              </p>
-              <p class="letter-text">
-                Mis Quinces
-              </p>
-              <span class="signature">Valentina</span>
-            </div>
-          </div>
-          <button
-            class="seal"
-            id="seal"
-            type="button"
-            aria-pressed="false"
-            aria-label="Abrir invitacion"
-          >
-            <span class="seal-letter">V</span>
-          </button>
+
+```
+  <!-- INTRO -->
+  <section class="intro">
+    <div class="envelope" id="envelope">
+      <div class="envelope-back"></div>
+      <div class="flap"></div>
+
+      <div class="letter">
+        <div class="letter-inner">
+          <p class="letter-title">Querida familia y amigos,</p>
+
+          <p class="letter-text">
+            Comienza otra etapa, otros caminos, otros sueños. Atrás quedan
+            imborrables recuerdos y se forjarán otros. Este día la fantasía se hace realidad.
+          </p>
+
+          <p class="letter-text">Mis Quinces</p>
+
+          <span class="signature">Valentina</span>
         </div>
-        <p class="hint" id="hint">Toca el sello para abrir la invitacion</p>
-      </section>
+      </div>
 
-      <main class="content" id="content">
-        <section class="section hero">
-          <div class="hero-card card fade-in">
-            <div class="hero-grid">
-              <div class="hero-copy">
-                <p class="eyebrow">Mis 15</p>
-                <div class="hero-title-row">
-                  <img
-                    class="hero-title-icon"
-                    src="front/portada.jpeg"
-                    alt="Retrato de Kiara Valentina"
-                    width="96"
-                    height="96"
-                    loading="eager"
-                  />
-                  <h1>Kiara Valentina</h1>
-                </div>
-                <p class="message">
-                 .
-                </p>
-                <p class="message light">
-                  Una invitacion elegante para compartir en familia y amigos.
-                </p>
-              </div>
-              <div class="hero-summary">
-                <div class="summary-card">
-                  <div class="summary-row">
-                    <span>Fecha</span>
-                    <strong>Sabado 18 de Abril</strong>
-                  </div>
-                  <div class="summary-row">
-                    <span>Hora</span>
-                    <strong>21:00</strong>
-                  </div>
-                  <div class="summary-row">
-                    <span>Lugar</span>
-                    <strong>Club Nueva Luna</strong>
-                  </div>
-                </div>
-                <div class="qr-mini">
-                  <span class="qr-label">Codigo QR</span>
-                  <img data-qr alt="Codigo QR de invitacion" loading="lazy" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="section">
-          <div class="details card fade-in">
-            <div class="header">
-              <h2>Vestimenta</h2>
-              <p>Una noche para recordar.</p>
-            </div>
-            <div class="grid">
-              <div class="item">
-                <strong>Evento semi formal</strong>
-              </div>
-              <div class="item">
-                <strong>Evitar vestimenta color celeste, color reservado para la quinceañera.</strong>
-              </div>
-            </div>
-            <div class="note">
-              <p>Te esperamos para celebrar juntos una noche inolvidable.</p>
-            </div>
-          </div>
-        </section>
-
-        <section class="section">
-          <div class="countdown card fade-in" data-event-date="2026-04-18T21:00:00-03:00">
-            <div class="countdown-header">
-              <h2>Cuenta regresiva</h2>
-              <p>Falta muy poco para este gran momento.</p>
-            </div>
-            <div class="countdown-grid">
-              <div class="time-box">
-                <span class="value" data-days>0</span>
-                <span class="label">Dias</span>
-              </div>
-              <div class="time-box">
-                <span class="value" data-hours>0</span>
-                <span class="label">Horas</span>
-              </div>
-              <div class="time-box">
-                <span class="value" data-minutes>0</span>
-                <span class="label">Minutos</span>
-              </div>
-              <div class="time-box">
-                <span class="value" data-seconds>0</span>
-                <span class="label">Segundos</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="section">
-          <div class="gallery card fade-in">
-            <div class="gallery-header">
-              <h2>Galeria</h2>
-              <p>Algunos recuerdos que nos acompañaron hasta hoy.</p>
-            </div>
-            <div class="carousel">
-              <div class="carousel-container">
-                <div class="carousel-slide active" style="background-image: url('front/assets/15.jpeg');">
-                  <div class="carousel-caption">
-                    <h3>Momentos especiales</h3>
-                    <p>Recuerdos inolvidables</p>
-                  </div>
-                </div>
-                <div class="carousel-slide" style="background-image: url('front/assets/16.jpeg');">
-                  <div class="carousel-caption">
-                    <h3>Celebraciones</h3>
-                    <p>Juntos en familia</p>
-                  </div>
-                </div>
-                <!-- Puedes reemplazar las URLs de las imágenes con fotos reales de la quinceañera y su familia/amigos-->
-                 
-                <div class="carousel-slide" style="background-image: url('front/assets/17.jpeg');">
-                  <div class="carousel-caption">
-                    <h3>Amistad</h3>
-                    <p>Amigos para siempre</p>
-                  </div>
-                </div>
-                <div class="carousel-slide" style="background-image: url('front/assets/18.jpeg');">
-                  <div class="carousel-caption">
-                    <h3>Nuevos comienzos</h3>
-                    <p>Una nueva etapa por delante</p>
-                  </div>
-                </div>
-              </div>
-              <button type="button" class="carousel-prev" aria-label="Foto anterior">‹</button>
-              <button type="button" class="carousel-next" aria-label="Foto siguiente">›</button>
-              <div class="carousel-indicators" role="tablist" aria-label="Seleccionar foto">
-                <button type="button" class="carousel-indicator active" aria-label="Foto 1" aria-current="true"></button>
-                <button type="button" class="carousel-indicator" aria-label="Foto 2"></button>
-                <button type="button" class="carousel-indicator" aria-label="Foto 3"></button>
-                <button type="button" class="carousel-indicator" aria-label="Foto 4"></button>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="section">
-           <div class="rsvp card fade-in">
-             <div class="rsvp-content">
-                <div>
-                  <h2>Recepción del Evento</h2>
-                 <p>
-                   Ubicación establecida:<br>
-                    Calle de las Instrucciones 36, esq. calpino, La Paz, Canelones
-                 </p>
-               </div>
-                  <button class="btn-primary" onclick="abrirMapa()">
-                  Ver ubicación 📍
-                   </button>
-             </div>
-           </div>
-        </section>
-        <section class="section">
-          <div class="rsvp card fade-in" data-phone="59897437448" data-message="Hola! Confirmo mi asistencia a los 15 de Valentina.">
-            <div class="rsvp-content">
-              <div>
-                <h2>Confirmacion</h2>
-                <p>
-                   Este día es especial para nosotros y más aún
-                   si tú estás presente. Por eso, te pedimos que
-                   nos hagas saber si nos acompañarás.
-                </p>
-              </div>
-              <a class="btn-primary" id="rsvp-link" target="_blank" rel="noopener">
-                Confirmar asistencia
-              </a>
-            </div>
-          </div>
-        </section>
-      </main>
+      <button class="seal" id="seal" type="button">
+        <span class="seal-letter">V</span>
+      </button>
     </div>
 
-    <script src="app.js"></script>
+    <p class="hint">Toca el sello para abrir la invitación</p>
+  </section>
+
+  <!-- CONTENIDO -->
+  <main class="content" id="content">
+
+    <!-- HERO -->
+    <section class="section hero">
+      <div class="hero-card card fade-in">
+        <div class="hero-grid">
+
+          <div class="hero-copy">
+            <p class="eyebrow">Mis 15</p>
+
+            <div class="hero-title-row">
+              <img
+                class="hero-title-icon"
+                src="portada.jpeg"
+                alt="Retrato"
+                width="96"
+                height="96"
+              />
+              <h1>Kiara Valentina</h1>
+            </div>
+
+            <p class="message light">
+              Una invitación elegante para compartir en familia y amigos.
+            </p>
+          </div>
+
+          <div class="hero-summary">
+            <div class="summary-card">
+              <div class="summary-row">
+                <span>Fecha</span>
+                <strong>Sábado 18 de Abril</strong>
+              </div>
+
+              <div class="summary-row">
+                <span>Hora</span>
+                <strong>21:00</strong>
+              </div>
+
+              <div class="summary-row">
+                <span>Lugar</span>
+                <strong>Club Nueva Luna</strong>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- VESTIMENTA -->
+    <section class="section">
+      <div class="details card fade-in">
+        <div class="header">
+          <h2>Vestimenta</h2>
+          <p>Una noche para recordar.</p>
+        </div>
+
+        <div class="grid">
+          <div class="item">
+            <strong>Evento semi formal</strong>
+          </div>
+
+          <div class="item">
+            <strong>Evitar color celeste (reservado para la quinceañera)</strong>
+          </div>
+        </div>
+
+        <div class="note">
+          <p>Te esperamos para celebrar juntos una noche inolvidable.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- COUNTDOWN -->
+    <section class="section">
+      <div class="countdown card fade-in" data-event-date="2026-04-18T21:00:00-03:00">
+        <div class="countdown-header">
+          <h2>Cuenta regresiva</h2>
+          <p>Falta muy poco para este gran momento.</p>
+        </div>
+
+        <div class="countdown-grid">
+          <div class="time-box">
+            <span class="value" data-days>0</span>
+            <span class="label">Días</span>
+          </div>
+
+          <div class="time-box">
+            <span class="value" data-hours>0</span>
+            <span class="label">Horas</span>
+          </div>
+
+          <div class="time-box">
+            <span class="value" data-minutes>0</span>
+            <span class="label">Minutos</span>
+          </div>
+
+          <div class="time-box">
+            <span class="value" data-seconds>0</span>
+            <span class="label">Segundos</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERIA -->
+    <section class="section">
+      <div class="gallery card fade-in">
+        <div class="gallery-header">
+          <h2>Galería</h2>
+          <p>Algunos recuerdos que nos acompañaron hasta hoy.</p>
+        </div>
+
+        <div class="carousel">
+          <div class="carousel-container">
+
+            <div class="carousel-slide active" style="background-image: url('assets/15.jpeg');"></div>
+            <div class="carousel-slide" style="background-image: url('assets/16.jpeg');"></div>
+            <div class="carousel-slide" style="background-image: url('assets/17.jpeg');"></div>
+            <div class="carousel-slide" style="background-image: url('assets/18.jpeg');"></div>
+
+          </div>
+
+          <button class="carousel-prev">‹</button>
+          <button class="carousel-next">›</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- UBICACION -->
+    <section class="section">
+      <div class="rsvp card fade-in">
+        <div class="rsvp-content">
+          <div>
+            <h2>Ubicación</h2>
+            <p>Calle de las Instrucciones 36, La Paz</p>
+          </div>
+
+          <button class="btn-primary" onclick="abrirMapa()">
+            Ver ubicación 📍
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONFIRMACION -->
+    <section class="section">
+      <div class="rsvp card fade-in">
+        <div class="rsvp-content">
+          <div>
+            <h2>Confirmación</h2>
+            <p>Esperamos contar contigo en este día especial.</p>
+          </div>
+
+          <a class="btn-primary" href="#">
+            Confirmar asistencia
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- MUSICA -->
+<audio id="music" loop>
+  <source src="musica.mp3" type="audio/mpeg">
+</audio>
+
+<button onclick="document.getElementById('music').play()">
+  Activar música 🎵
+</button>
+
+<script src="app.js"></script>
+```
+
   </body>
 </html>
