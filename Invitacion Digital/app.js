@@ -31,15 +31,6 @@ if (sealButton) {
   sealButton.addEventListener('click', openLetter);
 }
 
-const setupQr = () => {
-  const img = document.querySelector('[data-qr]');
-  const base = document.body.dataset.qrBase || 'http://localhost:8000/generate-qr?url=';
-  if (!img) {
-    return;
-  }
-  img.src = `${base}${encodeURIComponent(window.location.href)}`;
-};
-
 const setupRsvp = () => {
   const rsvp = document.querySelector('.rsvp[data-phone]');
   const link = document.getElementById('rsvp-link');
@@ -130,7 +121,6 @@ const setupCarousel = () => {
   goTo(index);
 };
 
-setupQr();
 setupRsvp();
 setupCountdown();
 setupCarousel();
